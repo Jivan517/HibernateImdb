@@ -1,4 +1,4 @@
-Hibernate Practice
+#Hibernate Practice
 
 Goal: To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
 
