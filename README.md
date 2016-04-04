@@ -16,8 +16,6 @@ Year of the movie
 
 Name of the artist
 
-Name of the character on the movie
-
 Director of the movie
 
 For the movies, it has to have at least the poster of the movie, a brief summary, the title and year. Also lists of directors, actors, genres. and a rating field. 
