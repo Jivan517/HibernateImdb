@@ -7,11 +7,13 @@ A) The source code: I prefer if you upload your project to Github and send me th
 B) An ER diagram or a Class Diagram: Use MySql Model options to create a diagram of the resulting database or prepare a class diagram of your data model.
 
 
-Goal: To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
+##Goals: 
 
-See information about movies and their artists
+To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
 
-Search the database by different criterias like:
+1) See information about movies and their artists
+
+2) Search the database by different criterias like:
 
 Name of the movie
 
