@@ -24,7 +24,7 @@
 		<property name="hibernate.connection.pool_size">1</property>
 		
 		<!-- Create database -->
-		<property name="hibernate.hbm2ddl.auto">none</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 
 		<!-- Show all SQL DML executed by Hibernate -->
 		<property name="hibernate.show_sql">true</property>
