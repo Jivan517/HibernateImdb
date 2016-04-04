@@ -27,6 +27,7 @@ public class ArtistDAO {
 			e.printStackTrace();
 			throw new Exception(e);
 		}
+		
 	}
 	
 	public Artist getArtist(int id) throws Exception{
@@ -72,7 +73,6 @@ public class ArtistDAO {
 			e.printStackTrace();
 			throw new Exception(e);
 		}
-		
 		return artists;
 		
 	}

@@ -16,6 +16,9 @@ public class Artist {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dob;
 	private String placeOfBirth;
+	
+	@Lob
+	@Column
 	private String biography;
 	
 	@Lob

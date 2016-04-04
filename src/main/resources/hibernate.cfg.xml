@@ -24,7 +24,7 @@
 		<property name="hibernate.connection.pool_size">1</property>
 		
 		<!-- Create database -->
-		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<property name="hibernate.hbm2ddl.auto">none</property>
 
 		<!-- Show all SQL DML executed by Hibernate -->
 		<property name="hibernate.show_sql">true</property>
@@ -35,7 +35,9 @@
 		<property name="current_session_context_class">thread</property>
 		
 		<!-- List of mapping classes -->
-		
+		<mapping class = "cs.mum.edu.extraCredit.domain.Director" />
+		<mapping class = "cs.mum.edu.extraCredit.domain.Artis" />
+		<mapping class = "cs.mum.edu.extraCredit.domain.Movie" />
 
 	</session-factory>
 </hibernate-configuration>
