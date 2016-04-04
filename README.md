@@ -1,4 +1,11 @@
+
 #Hibernate Practice
+
+##Submission
+A) The source code: I prefer if you upload your project to Github and send me the link.
+
+B) An ER diagram or a Class Diagram: Use MySql Model options to create a diagram of the resulting database or prepare a class diagram of your data model.
+
 
 Goal: To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
 
