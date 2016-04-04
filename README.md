@@ -1,10 +1,19 @@
+
 #Hibernate Practice
 
-Goal: To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
+##Submission
+A) The source code: I prefer if you upload your project to Github and send me the link.
 
-See information about movies and their artists
+B) An ER diagram or a Class Diagram: Use MySql Model options to create a diagram of the resulting database or prepare a class diagram of your data model.
 
-Search the database by different criterias like:
+
+##Goals: 
+
+To create a database and the data access objects (DAOs) for a website similar to www.imdb.com; where the users will be able to:
+
+1) See information about movies and their artists
+
+2) Search the database by different criterias like:
 
 Name of the movie
 
@@ -15,8 +24,6 @@ Rating of the movie
 Year of the movie
 
 Name of the artist
-
-Name of the character on the movie
 
 Director of the movie
 
