@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import cs.mum.edu.extraCredit.dao.ArtistDAO;
 import cs.mum.edu.extraCredit.dao.DirectorDAO;
@@ -25,10 +26,11 @@ public class Application {
 	
 	public static void main(String[] args) throws Exception {
 		
-		populateDirectors();
-		populateArtists();
-		populateMovies();
+//		populateDirectors();
+//		populateArtists();
+//		populateMovies();
 		
+		printInf();
 
 		
 	}
@@ -82,8 +84,32 @@ public class Application {
 		
 		
 	}
+	
+	private static void updateInfo(){
+		
+		
+		
+	}
 
-	private static  void printInfo(){
+	private static  void printInf() throws Exception{
+		
+		MovieDAO movieDao = new MovieDAO();
+		List<Movie> movies = movieDao.getMovieByName("Titanic");
+		System.out.println("\n\n_____1. Name of the movie:Titanic_________\n\n");
+		
+		System.out.println(String.format("%1$10s %2$10s %3$10s %4$10s", "Title", "Year","Rating", "Summary"));
+		for(Movie m: movies){
+			System.out.println(String.format("%1$10s %2$10s %3$10s %4$10s", m.getTitle(), m.getYear(), m.getRating(), m.getSummary()));
+		}
+		
+		
+		movies = movieDao.getMoviesByArtistName("Leonardo",	"DiCaprio");
+		System.out.println("\n\n_____1. By Artist Name: Leo_________\n\n");
+		
+		System.out.println(String.format("%1$10s %2$10s %3$10s %4$10s %5$10s", "Title", "Year","Rating",  "Summary"));
+		for(Movie m: movies){
+			System.out.println(String.format("%1$10s %2$10s %3$10s %4$10s", m.getTitle(), m.getYear(), m.getRating(), m.getSummary()));
+		}
 		
 		
 	}

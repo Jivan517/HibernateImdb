@@ -50,7 +50,7 @@ public class DirectorDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Director> getDirectorByName(String name) throws Exception{
+	public List<Director> getDirectorByName(String firstName, String lastName) throws Exception{
 		
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction tx = null;
@@ -59,8 +59,9 @@ public class DirectorDAO {
 		try {
 			
 			tx = session.beginTransaction();
-			Query directorQuery = session.createQuery("FROM Director m WHERE m.name = :name");
-			directorQuery.setParameter("name", name);
+			Query directorQuery = session.createQuery("FROM Director m WHERE m.firstName = :firstName AND m.lastName = :lastName");
+			directorQuery.setParameter("firstName", firstName);
+			directorQuery.setParameter("lastName", lastName);
 			
 			directors = directorQuery.list();
 			

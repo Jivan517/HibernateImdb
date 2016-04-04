@@ -1,5 +1,8 @@
 package cs.mum.edu.extraCredit.domain;
 import javax.persistence.*;
+
+import org.hibernate.annotations.Cascade;
+
 import java.util.*;
 
 @Entity
@@ -32,11 +35,13 @@ public class Movie {
 	private List<String> comments = new ArrayList<>();
 	
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
+	@Cascade(value = {org.hibernate.annotations.CascadeType.DELETE })
 	@JoinTable(name = "MovieDirector")
 	private List<Director> directors = new ArrayList<>();
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
+	@Cascade(value = {org.hibernate.annotations.CascadeType.ALL })
 	@JoinTable(name = "MovieArtist")
 	private List<Artist> artists = new ArrayList<>();
 

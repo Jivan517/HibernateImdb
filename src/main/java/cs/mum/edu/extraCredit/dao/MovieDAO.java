@@ -108,7 +108,7 @@ public class MovieDAO {
 		try {
 			
 			tx = session.beginTransaction();
-			Query movieQuery = session.createQuery("FROM Movie m WHERE m.name = :name");
+			Query movieQuery = session.createQuery("FROM Movie m WHERE m.title = :name");
 			movieQuery.setParameter("name", name);
 			
 			movies = movieQuery.list();
@@ -192,6 +192,7 @@ public class MovieDAO {
 	/**search movie by Name of the artist
 
 	 */
+	@SuppressWarnings("unchecked")
 	public List<Movie> getMoviesByArtistName(String firstName, String lastName)
 			throws Exception{
 
@@ -202,8 +203,8 @@ public class MovieDAO {
 		try {
 			
 			tx = session.beginTransaction();
-			Query movieQuery = session.createQuery("FROM Movie m WHERE "
-					+ "m.artists.firstName = :firstName AND m.artists.lastName = :lastName");
+			Query movieQuery = session.createQuery("SELECT m FROM Movie m JOIN m.artists a WHERE "
+					+ "a.firstName = :firstName AND a.lastName = :lastName");
 			movieQuery.setParameter("firstName", firstName);
 			movieQuery.setParameter("lastName", lastName);
 			
